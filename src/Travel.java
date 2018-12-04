@@ -24,7 +24,6 @@ public class Travel {
 
                 //Relax
                 if(bestCost[edgeLists[i][j].to] > bestCost[edgeLists[i][j].from] + nodeWeights[edgeLists[i][j].to] + edgeLists[i][j].weight) {
-                    System.out.println("got this far!");
                     bestCost[edgeLists[i][j].to] = bestCost[edgeLists[i][j].from] + nodeWeights[edgeLists[i][j].to] + edgeLists[i][j].weight;
                 }
             }
