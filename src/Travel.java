@@ -19,7 +19,7 @@ public class Travel {
         //For each vertex u taken in topological order
         for(int i = 0; i < n; i++) {
 
-            //For each vertex v contained in G.Adj[u] //j > i(j = i+1) for fast solution
+            //For each vertex v contained in G.Adj[u]
             for(int j = 0; j < edgeLists[i].length; j++) {
 
                 //Relax
