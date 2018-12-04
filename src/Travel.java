@@ -17,15 +17,15 @@ public class Travel {
         //Already sorted topologically
 
         //For each vertex u taken in topological order
-        for(int i = 0; i < nodeWeights.length; i++) {
+        for(int i = 0; i < n; i++) {
 
             //For each vertex v contained in G.Adj[u] //j > i(j = i+1) for fast solution
             for(int j = 0; j < edgeLists[i].length; j++) {
 
                 //Relax
-                if(bestCost[edgeLists[i][j].to] > bestCost[edgeLists[i][j].from] + nodeWeights[edgeLists[i][j].from] + edgeLists[i][j].weight) {
+                if(bestCost[edgeLists[i][j].to] > bestCost[edgeLists[i][j].from] + nodeWeights[edgeLists[i][j].to] + edgeLists[i][j].weight) {
                     System.out.println("got this far!");
-                    bestCost[edgeLists[i][j].to] = bestCost[edgeLists[i][j].from] + nodeWeights[edgeLists[i][j].from] + edgeLists[i][j].weight;
+                    bestCost[edgeLists[i][j].to] = bestCost[edgeLists[i][j].from] + nodeWeights[edgeLists[i][j].to] + edgeLists[i][j].weight;
                 }
             }
         }
